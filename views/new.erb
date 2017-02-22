@@ -1,0 +1,23 @@
+<form method="POST" action="/pizzas">
+  <label for="first_name">First Name:</label>
+  <input type="text" name="first_name" id="first_name"/>
+
+  <label for="last_name">Last Name:</label>
+  <input type="text" name="last_name" id="last_name"/>
+
+  <label for="pizza-select">Select Pizza:</label>
+  <select id="pizza-select" name="topping">
+    <option value="Margherita">Margherita</option>
+    <option value="Calzone">Calzone</option>
+    <option value="Pepperoni">Pepperoni</option>
+  </select>
+
+  <label for="quantity">Select quantity:</label>
+  <input min="1" type="number" name="quantity" id="quantity""/>
+
+  <input type="submit" value="Order Pizza"/>
+</form>
+
+<!-- 'name' should match exactly the column in our database and the string in our options hash (in pizza.rb) -->
+<!-- for = "first_name" allows us to click on First Name in the website and the cursor moves into the input label. Great for everyone. By not wrapping this in the label tab, it works for accessibility (e.g. screen readers) -->
+<!-- 'Select' tag should be called drop-down box! -->
